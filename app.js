@@ -4,7 +4,7 @@ import 'express-async-errors';
 import express from 'express';
 import bodyParser from "body-parser";
 
-import { routes } from './src/routes';
+import { routes } from './src/routes/index.js';
 
 const app = express();
 const port = 3000;
@@ -25,5 +25,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Server is running in http://localhost:${port}`);
+    console.log(`Server is running in port ${port}`);
 });
